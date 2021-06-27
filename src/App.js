@@ -1,8 +1,11 @@
 import React from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/Header/Header";
+import Login from "./components/Login";
 import Orderrequest from "./components/OrderRequest/orderrequest";
 import Orderstats from "./components/OrderStats/orderstats";
 import Orderstatus from "./components/OrderStatus/orderstatus";
+import Register from "./components/Register";
 
 /**
  * NOTE::
@@ -40,13 +43,29 @@ function App() {
     return (
         <React.Fragment>
             <div>
-                <button onClick={() => getToken()}>DEMO LOGIN</button>
-            </div>
-            <div>
-                <Orderstats />
-                <Orderrequest />
-                <Orderstatus />
-                <Header />
+                <Router>
+                    <Switch>
+                        <Route exact path="/login">
+                            <Login />
+                        </Route>
+                        <Route exact path="/register">
+                            <Register />
+                        </Route>
+                        <Route exact path="/">
+                            <div>
+                                <button onClick={() => getToken()}>
+                                    DEMO LOGIN BUTTON
+                                </button>
+                            </div>
+                            <div>
+                                <Orderstats />
+                                <Orderrequest />
+                                <Orderstatus />
+                                <Header />
+                            </div>
+                        </Route>
+                    </Switch>
+                </Router>
             </div>
         </React.Fragment>
     );
