@@ -1,0 +1,24 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "hai-server",
+            "author": "sumn2u"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        },
+        {
+            "email": "bruno@email.com",
+            "password": "bruno",
+            "id": 2
+        }
+    ],
+    "profile": {
+        "name": "sumn2u"
+    }
+}
