@@ -1,17 +1,19 @@
 import React from 'react'
 import styled from "styled-components";
+import ScrollMenu from 'react-horizontal-scrolling-menu';
+
 
 const Box = styled.div`
+    margin-left: 20%;
     width : 50%;
     background-color: #F5F5F5;
     border-radius: 20px;
     height: 100px;
     float: left;
-    /* margin: 20px; */
-    margin-left: 20%;
-    /* padding: 20px; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     overflow-x: auto;
-
 `;
 
 const Card = styled.div`
@@ -21,9 +23,9 @@ const Card = styled.div`
   height: 50px;
   background-color: white;
   text-align: center;
-  float: left;
   border-radius: 5px;
   box-shadow: 2px 3px 10px 0 grey;
+  /* float: left; */
 `;
 
 const Stat = styled.div`
@@ -38,7 +40,7 @@ const Name = styled.div`
 
 function Orderstats() {
   return (
-    <Box>
+      <Box>
       <Card>
         <Stat icolor = "lightgreen">180</Stat>
         <Name>Order's Done</Name>
@@ -55,16 +57,15 @@ function Orderstats() {
         <Stat icolor = "orange">140</Stat>
         <Name>New Orders</Name>
       </Card>
-      <Card>
+      {/* <Card>
         <Stat icolor = "orange">140</Stat>
         <Name>New Orders</Name>
       </Card>
       <Card>
         <Stat icolor = "orange">140</Stat>
         <Name>New Orders</Name>
-      </Card>
-      
-    </Box>
+      </Card> */}
+      </Box>
   )
 }
 

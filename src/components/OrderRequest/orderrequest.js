@@ -10,6 +10,7 @@ const Box = styled.div`
     margin-right: 20px;
     margin-top: 20px;
     padding: 6px;
+    
 
 `;
 
