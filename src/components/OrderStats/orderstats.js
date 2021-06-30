@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from "styled-components";
-import ScrollMenu from 'react-horizontal-scrolling-menu';
-
 
 const Box = styled.div`
     margin-left: 20%;

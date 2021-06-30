@@ -21,7 +21,7 @@
     "profile": {
         "name": "sumn2u"
     },
-    "order-details": [
+    "orders": [
         {
             "orderId": "DT100",
             "name": "Feil, Schaden and Farrell",

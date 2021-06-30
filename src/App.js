@@ -6,7 +6,11 @@ import Orderrequest from "./components/OrderRequest/orderrequest";
 import Orderstats from "./components/OrderStats/orderstats";
 import Orderstatus from "./components/OrderStatus/orderstatus";
 import Register from "./components/Register";
+import { ConfigureStore } from "./Redux/configureStore";
+import { Provider } from "react-redux";
 
+
+const store = ConfigureStore();
 /**
  * NOTE::
  *
@@ -39,10 +43,11 @@ const getToken = () => {
 
 function App() {
     getToken();
-
+    
     return (
         <React.Fragment>
             <div>
+                <Provider store= {store}>
                 <Router>
                     <Switch>
                         <Route exact path="/login">
@@ -58,6 +63,7 @@ function App() {
                                 </button>
                             </div>
                             <div>
+                                <br/>
                                 <Orderstats />
                                 <Orderrequest />
                                 <Orderstatus />
@@ -66,6 +72,7 @@ function App() {
                         </Route>
                     </Switch>
                 </Router>
+                </Provider>
             </div>
         </React.Fragment>
     );

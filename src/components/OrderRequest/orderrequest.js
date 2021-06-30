@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
+import { connect } from 'react-redux';
+import { fetchOrders } from '../../Redux/ActionCreaters';
 
 const Box = styled.div`
     background-color: rgba(228, 229, 229, 1);
@@ -57,39 +59,56 @@ const Button = styled.span`
 `;
 
 
-function Orderrequest() {
+
+function RenderOrder ({order}){
+  return (
+    <Card>
+          <Link>39 min ago</Link>
+          <Data>Order Id - {order.orderId}</Data>
+          <Link>{order.itemsInCart}</Link>
+          <Data>Name - {order.name}</Data>
+          <Link>{order.weight} kg</Link>
+          <Data>Customer id - {order.customerId}</Data>
+          <Link>{order.distance}km</Link>
+          <Data>50       20min</Data>
+          <br/>
+          <Button>Accept</Button>
+          <Button>Deny</Button>
+      </Card>
+  )
+};
+function Orderrequest(props) {
+
+  // const [currentPage, setCurrentPage] = useState[1];
+  // const [ordersPerPage] = useState[5];
+  useEffect(() =>{
+    props.fetchOrders();
+  },[])
+
+  const od = props.orders.map((order) =>{
+    return(
+        <div key={order.orderId}>
+        <RenderOrder order={order}/>
+        </div>
+    )
+  })
+
   return (
     <Box>
       <Link icolor = "rgba(7, 166, 243, 1)"  mr = "10px">See all</Link>
-      <Head>Order Requests</Head> 
-      <Card>
-          <Link>39 min ago</Link>
-          <Data>Order Id - AB00001</Data>
-          <Link>4</Link>
-          <Data>Name - P K Traders</Data>
-          <Link>6 kg</Link>
-          <Data>Customer id - 17262</Data>
-          <Link>2km</Link>
-          <Data>50       20min</Data>
-          <br/>
-          <Button>Accept</Button>
-          <Button>Deny</Button>
-      </Card>
-      <Card>
-          <Link>39 min ago</Link>
-          <Data>Order Id - AB00001</Data>
-          <Link>4</Link>
-          <Data>Name - P K Traders</Data>
-          <Link>6 kg</Link>
-          <Data>Customer id - 17262</Data>
-          <Link>2km</Link>
-          <Data>50       20min</Data>
-          <br/>
-          <Button>Accept</Button>
-          <Button>Deny</Button>
-      </Card>
+      <Head>Order Requests</Head>
+      {od} 
     </Box>
   )
 }
+const mapStateToProps = state => {
+  return{
+    orders: state.orders
+  }
+}
 
-export default Orderrequest
+const mapDispatchToProps = dispatch => ({
+  fetchOrders: () => {dispatch(fetchOrders())}
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Orderrequest);
