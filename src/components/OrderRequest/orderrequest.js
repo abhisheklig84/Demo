@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux';
 import { fetchOrders } from '../../Redux/ActionCreaters';
+import Pagination from '../Pagination';
 
 const Box = styled.div`
     background-color: rgba(228, 229, 229, 1);
@@ -76,19 +77,28 @@ function RenderOrder ({order}){
           <Button>Deny</Button>
       </Card>
   )
-};
+}
+
 function Orderrequest(props) {
 
-  // const [currentPage, setCurrentPage] = useState[1];
-  // const [ordersPerPage] = useState[5];
+  const [currentPage, setCurrentPage] = useState(1);
+  const [ordersPerPage] = useState(5);
+
   useEffect(() =>{
     props.fetchOrders();
   },[])
 
-  const od = props.orders.map((order) =>{
+  const indexOfLastOrder = currentPage * ordersPerPage;
+  const indexOfFirstOrder = indexOfLastOrder - ordersPerPage;
+  const currentOrders = props.orders.slice(indexOfFirstOrder, indexOfLastOrder);
+
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
+  const od = currentOrders.map((order) =>{
     return(
-        <div key={order.orderId}>
+        <div >
         <RenderOrder order={order}/>
+        
         </div>
     )
   })
@@ -97,7 +107,8 @@ function Orderrequest(props) {
     <Box>
       <Link icolor = "rgba(7, 166, 243, 1)"  mr = "10px">See all</Link>
       <Head>Order Requests</Head>
-      {od} 
+      {od}
+      <Pagination ordersPerPage= {ordersPerPage} totalOrders={props.orders.length} paginate={paginate} /> 
     </Box>
   )
 }
