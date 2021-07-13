@@ -9,8 +9,6 @@ const Box = styled.div`
   float: left;
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0 lightgrey;
-  /* position: absolute;
-  top: 100px; */
   margin-bottom: 20px;
 `;
 function Orderstatus() {

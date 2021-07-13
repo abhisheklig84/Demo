@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: none;
+        stroke: #000;
+        stroke-width: 2px;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_1" data-name="Rectangle 1" class="cls-1" width="26" height="26"/>
+    </clipPath>
+  </defs>
+  <g id="Group_1" data-name="Group 1" class="cls-2">
+    <path id="Path_1" data-name="Path 1" class="cls-3" d="M23.833,3.25,2.166,11.917l20.042,8.667Zm-13,18.958,3.25-4.875Zm5.958-11.917L9.75,15.167l.931,6.513c.085.591.234.582.332,0l.9-5.426Z"/>
+  </g>
+</svg>

@@ -2,9 +2,9 @@ import React from 'react'
 import styled from "styled-components";
 
 const Box = styled.div`
-    margin-left: 20%;
+    margin-left: 18%;
     width : 50%;
-    background-color: #F5F5F5;
+    /* background-color: #F5F5F5; */
     border-radius: 20px;
     height: 100px;
     float: left;
@@ -23,7 +23,6 @@ const Card = styled.div`
   text-align: center;
   border-radius: 5px;
   box-shadow: 2px 3px 10px 0 grey;
-  /* float: left; */
 `;
 
 const Stat = styled.div`
@@ -55,14 +54,6 @@ function Orderstats() {
         <Stat icolor = "orange">140</Stat>
         <Name>New Orders</Name>
       </Card>
-      {/* <Card>
-        <Stat icolor = "orange">140</Stat>
-        <Name>New Orders</Name>
-      </Card>
-      <Card>
-        <Stat icolor = "orange">140</Stat>
-        <Name>New Orders</Name>
-      </Card> */}
       </Box>
   )
 }

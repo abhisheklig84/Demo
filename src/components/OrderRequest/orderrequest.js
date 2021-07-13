@@ -23,6 +23,8 @@ const Card = styled.div`
   padding: 10px;
   border-radius: 10px;
   margin-bottom: 10px;
+  box-shadow: 2px 3px 10px 0 grey;
+
 `;
 
 const Head = styled.div`
@@ -40,6 +42,7 @@ const Link = styled.div`
   color: ${props => props.icolor || "black"};
   margin: ${props =>props.mr || "0px"};
   font-size: 0.8em;
+  font-weight: 800;
 `;
 
 const Button = styled.span`
@@ -64,7 +67,7 @@ const Button = styled.span`
 function RenderOrder ({order}){
   return (
     <Card>
-          <Link>39 min ago</Link>
+          <Link icolor="#F7685B">39 min ago</Link>
           <Data>Order Id - {order.orderId}</Data>
           <Link>{order.itemsInCart}</Link>
           <Data>Name - {order.name}</Data>
@@ -82,7 +85,7 @@ function RenderOrder ({order}){
 function Orderrequest(props) {
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [ordersPerPage] = useState(5);
+  const [ordersPerPage] = useState(2);
 
   useEffect(() =>{
     props.fetchOrders();

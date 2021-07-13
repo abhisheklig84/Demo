@@ -8,7 +8,8 @@ import Orderstatus from "./components/OrderStatus/orderstatus";
 import Register from "./components/Register";
 import { ConfigureStore } from "./Redux/configureStore";
 import { Provider } from "react-redux";
-
+import TimelineComp from "./components/timeline";
+import { StylesProvider } from "@material-ui/core";
 
 const store = ConfigureStore();
 /**
@@ -45,12 +46,13 @@ function App() {
     getToken();
     
     return (
+      <Provider store= {store}>
+          <StylesProvider injectFirst>
         <React.Fragment>
             <div>
-                <Provider store= {store}>
                 <Router>
                     <Switch>
-                        <Route exact path="/login">
+                        {/* <Route exact path="/login">
                             <Login />
                         </Route>
                         <Route exact path="/register">
@@ -61,20 +63,25 @@ function App() {
                                 <button onClick={() => getToken()}>
                                     DEMO LOGIN BUTTON
                                 </button>
-                            </div>
+                            </div> */}
                             <div>
+                                <Header />
+                                <br/>
                                 <br/>
                                 <Orderstats />
                                 <Orderrequest />
                                 <Orderstatus />
-                                <Header />
+                                <TimelineComp/>
+                                
                             </div>
-                        </Route>
+                        {/* </Route> */}
                     </Switch>
                 </Router>
-                </Provider>
+                
             </div>
         </React.Fragment>
+        </StylesProvider>
+        </Provider>
     );
 }
 
