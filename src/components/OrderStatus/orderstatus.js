@@ -3,13 +3,13 @@ import styled from 'styled-components'
 
 const Box = styled.div`
   background-color: white;
-  height: 500px;
-  width: 50%;
-  margin-left: 20%;
-  float: left;
+  height: 505px;
+  width: 779px !important;
+  margin-left: 2%;
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0 lightgrey;
-  margin-bottom: 20px;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
 `;
 function Orderstatus() {
   return (

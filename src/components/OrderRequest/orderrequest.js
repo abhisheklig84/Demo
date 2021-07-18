@@ -3,81 +3,89 @@ import styled from 'styled-components'
 import { connect } from 'react-redux';
 import { fetchOrders } from '../../Redux/ActionCreaters';
 import Pagination from '../Pagination';
+import Bag from '../../Assets/Bag.svg';
+import Location from '../../Assets/Location.svg';
+import Dollar from '../../Assets/Dollar.svg';
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
 
 const Box = styled.div`
-    background-color: rgba(228, 229, 229, 1);
-    border-radius: 20px;
-    height: auto;
-    float: right;
-    width: 25%;
-    margin-right: 20px;
-    margin-top: 20px;
-    padding: 6px;
-    
-
+    width: 345px;
+    margin-left: 20px;
+    margin-top: 65px;
 `;
 
 const Card = styled.div`
   background-color: white;
-  height: auto;
-  padding: 10px;
+  height: 176px;
+  width: 345px;
+  padding: 10px 0px 10px 10px;
   border-radius: 10px;
   margin-bottom: 10px;
   box-shadow: 2px 3px 10px 0 grey;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 `;
 
-const Head = styled.div`
-  font-weight: bold;
-  font-size: 1.2em;
-  padding: 10px;
+const Set = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
-const Data = styled.div`
-  font-size: 0.8em;
-`;
-
-const Link = styled.div`
-  float: right;
-  color: ${props => props.icolor || "black"};
-  margin: ${props =>props.mr || "0px"};
-  font-size: 0.8em;
-  font-weight: 800;
+const Ele = styled.div`
+  width: ${props => props.iwidth}px;
+  font-size: ${props =>props.isize || "14"}px;
+  font-weight: ${props =>props.iweight || "700"};
+  color: ${props =>props.icolor || "#323C47"};
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-right: ${props =>props.mr}; 
 `;
 
 const Button = styled.span`
-  border: 3px solid lightgrey;
-  border-radius: 10px;
-  padding: 5px 20px 5px 20px;
-  font-size: 0.8em;
-  margin: 13px;
-  position: relative;
-  left: 15%;
-
-  &:hover{
-    color: white;
-    background-color: rgba(7, 166, 243, 1);
-    border: 3px solid rgba(7, 166, 243, 1);
-
-  }
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 119px;
+  height: 27px;
+  background-color: ${props =>props.ibg};
+  color: ${props =>props.icolor || "white"};
+  text-align: center;
+  padding-top: 2px;
+  margin:10px 0px 10px 8px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 `;
 
-
+const Img = styled.img`
+    background-color: ${props => props.icolor || "none"};
+    padding: 7px;
+    border-radius: 100px;
+`;
 
 function RenderOrder ({order}){
   return (
     <Card>
-          <Link icolor="#F7685B">39 min ago</Link>
-          <Data>Order Id - {order.orderId}</Data>
-          <Link>{order.itemsInCart}</Link>
-          <Data>Name - {order.name}</Data>
-          <Link>{order.weight} kg</Link>
-          <Data>Customer id - {order.customerId}</Data>
-          <Link>{order.distance}km</Link>
-          <Data>50       20min</Data>
-          <br/>
-          <Button>Accept</Button>
-          <Button>Deny</Button>
+      <Set>
+        <Ele iweight="900" icolor="#575555">Order Id - {order.orderId}</Ele>
+        <Ele>Name - {order.name}</Ele>
+        <Ele>Customer id - {order.customerId}</Ele>
+        <Ele iwidth="170">
+          <Ele iwidth="40" icolor="#575555" mr="10px"><Img src={Dollar}/>50 </Ele>
+          <Ele icolor="#575555" iwidth="70"><AccessTimeIcon fontSize="small"/>20min</Ele></Ele>
+        <Ele>
+          <Button ibg="#2CA6F1">Accept</Button>
+          <Button icolor="#2CA6F1">Deny</Button>
+        </Ele>
+      </Set>
+      <Set>
+        <Ele iwidth="100" isize="12px" icolor="">39 min ago</Ele>
+        <Ele iwidth="70"><Img icolor="#109Cf1" src={Bag}/>{order.itemsInCart}</Ele>
+        <Ele iwidth="70"><Img icolor="#109Cf1" src={Bag}/>{order.weight} kg</Ele>
+        <Ele iwidth="70"><Img icolor="#109Cf1" src={Location}/>{order.distance} km</Ele>
+      </Set>
       </Card>
   )
 }
@@ -108,8 +116,9 @@ function Orderrequest(props) {
 
   return (
     <Box>
-      <Link icolor = "rgba(7, 166, 243, 1)"  mr = "10px">See all</Link>
-      <Head>Order Requests</Head>
+      <Ele>
+      <Ele isize="16">Order Requests</Ele>
+      <Ele icolor = "#109CF1">See all</Ele></Ele>
       {od}
       <Pagination ordersPerPage= {ordersPerPage} totalOrders={props.orders.length} paginate={paginate} /> 
     </Box>

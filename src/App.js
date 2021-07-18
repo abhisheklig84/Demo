@@ -1,87 +1,49 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Login from "./components/Login";
 import Orderrequest from "./components/OrderRequest/orderrequest";
 import Orderstats from "./components/OrderStats/orderstats";
 import Orderstatus from "./components/OrderStatus/orderstatus";
-import Register from "./components/Register";
+import DeliveryStatus from "./components/DeliveryStatus";
 import { ConfigureStore } from "./Redux/configureStore";
 import { Provider } from "react-redux";
 import TimelineComp from "./components/timeline";
 import { StylesProvider } from "@material-ui/core";
+import SideBar from "./components/SideBar";
+import styled from "styled-components";
 
 const store = ConfigureStore();
-/**
- * NOTE::
- *
- * Use this function as reference when you make API calls.
- *
- * Don't forget to check the `auth.json` & `db.json` files for knowing the protected routes,
- * and database schema (format of the JSON you'll get from the API call).
- *
- * Lastly, whenever you're confused, try `console.log()`ing everything, from the `auth_token` to the JSON response.
- */
 
-const getToken = () => {
-    fetch("http://localhost:5000/auth/login", {
-        method: "POST",
-        mode: "cors",
-        headers: {
-            Accept: "application/json",
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            email: "bruno@email.com",
-            password: "bruno",
-        }),
-    })
-        .then((response) => response.json())
-        .then((token) => {
-            console.log(token);
-        });
-};
+const AM1  = styled.div`
+    display: flex;
+    flex-direction: row;
+`;
+const AM2  = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+const AM3  = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
 
-function App() {
-    getToken();
-    
+function App() {    
     return (
       <Provider store= {store}>
-          <StylesProvider injectFirst>
-        <React.Fragment>
-            <div>
-                <Router>
-                    <Switch>
-                        {/* <Route exact path="/login">
-                            <Login />
-                        </Route>
-                        <Route exact path="/register">
-                            <Register />
-                        </Route>
-                        <Route exact path="/">
-                            <div>
-                                <button onClick={() => getToken()}>
-                                    DEMO LOGIN BUTTON
-                                </button>
-                            </div> */}
-                            <div>
-                                <Header />
-                                <br/>
-                                <br/>
-                                <Orderstats />
-                                <Orderrequest />
-                                <Orderstatus />
-                                <TimelineComp/>
-                                
-                            </div>
-                        {/* </Route> */}
-                    </Switch>
-                </Router>
-                
-            </div>
-        </React.Fragment>
+        <StylesProvider injectFirst>
+            <AM1>
+                <SideBar/>
+                <AM2>
+                <Orderstats />
+                <Orderstatus />
+                </AM2>
+
+                <AM3>
+                <Orderrequest />
+                <TimelineComp/>
+                <DeliveryStatus/>
+                </AM3>
+            </AM1>
         </StylesProvider>
-        </Provider>
+    </Provider>
     );
 }
 

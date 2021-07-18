@@ -1,58 +1,59 @@
 import React from 'react'
 import styled from "styled-components";
+import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 const Box = styled.div`
-    margin-left: 18%;
-    width : 50%;
-    /* background-color: #F5F5F5; */
-    border-radius: 20px;
-    height: 100px;
-    float: left;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    overflow-x: auto;
+    margin-top: 70px;
 `;
 
 const Card = styled.div`
-  padding: 5px;
-  margin: 20px;
-  width: 100px;
-  height: 50px;
+  padding: 10px;
+  margin: 20px 0px 20px 19px;
+  width: ${props => props.iwidth};
+  height: 101px;
   background-color: white;
   text-align: center;
-  border-radius: 5px;
-  box-shadow: 2px 3px 10px 0 grey;
+  box-shadow: 0px 4px 4px #C4C4C4;
 `;
 
 const Stat = styled.div`
-  color: ${props => props.icolor};
-  font-weight: bolder;
-  font-size: 1.3em;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 25px;
 `;
 
 const Name = styled.div`
-    font-size: 0.8em;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 `;
-
+const SFiberManualRecordIcon = styled(FiberManualRecordIcon)`
+  color: ${props => props.icolor};
+`;
 function Orderstats() {
   return (
       <Box>
-      <Card>
-        <Stat icolor = "lightgreen">180</Stat>
-        <Name>Order's Done</Name>
+      <Card iwidth="172px">
+        <Stat>225</Stat>
+        <Name><SFiberManualRecordIcon icolor="#2ED47A" fontSize="large" />Order's Done</Name>
       </Card>
-      <Card>
-        <Stat icolor = "red">20</Stat>
-        <Name>Order's Denies</Name>
+      <Card iwidth="182px">
+        <Stat>120</Stat>
+        <Name><SFiberManualRecordIcon icolor="#FC0C0C" fontSize="large" />Order's Denies</Name>
       </Card>
-      <Card>
-        <Stat icolor = "blue">60</Stat>
-        <Name>Order's Pending</Name>
+      <Card iwidth="182px">
+        <Stat>80</Stat>
+        <Name><SFiberManualRecordIcon icolor="#109CF1" fontSize="large" />Order's Pending</Name>
       </Card>
-      <Card>
-        <Stat icolor = "orange">140</Stat>
-        <Name>New Orders</Name>
+      <Card iwidth="181px">
+        <Stat>110</Stat>
+        <Name><SFiberManualRecordIcon icolor="#FFB946" fontSize="large"/>New Orders</Name>
       </Card>
       </Box>
   )
