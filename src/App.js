@@ -9,6 +9,7 @@ import TimelineComp from "./components/timeline";
 import { StylesProvider } from "@material-ui/core";
 import SideBar from "./components/SideBar";
 import styled from "styled-components";
+import DroneStatus from "./components/DroneStatus/droneStatus";
 
 const store = ConfigureStore();
 
@@ -34,6 +35,7 @@ function App() {
                 <AM2>
                 <Orderstats />
                 <Orderstatus />
+                <DroneStatus/>
                 </AM2>
 
                 <AM3>

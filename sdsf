@@ -1,0 +1,139 @@
+[33mcommit 5c0923fc5496977ddb427b8284af4a24d88af4cc[m[33m ([m[1;36mHEAD -> [m[1;32mrahul[m[33m)[m
+Author: Rahul-TL <rahul.trinitylabs@gmail.com>
+Date:   Sun Jul 18 16:10:00 2021 +0530
+
+    Sorted Whole Code to simpler one
+
+[33mcommit 896f91403811d360eea02c3c4eb8bef166255805[m
+Author: Rahul-TL <rahul.trinitylabs@gmail.com>
+Date:   Tue Jul 13 13:02:54 2021 +0530
+
+    timeline
+
+[33mcommit 5a0fe82ab82d5cfba076a46abf4202da9aad027d[m[33m ([m[1;31morigin/rahul[m[33m)[m
+Author: agarwarahul-22 <ag.rahul223@gmail.com>
+Date:   Wed Jun 30 16:00:43 2021 +0530
+
+    Pagination
+
+[33mcommit 00cb6665915aa545542ee56cba02819c34c7e192[m
+Author: agarwarahul-22 <ag.rahul223@gmail.com>
+Date:   Wed Jun 30 12:17:17 2021 +0530
+
+    Redux part
+
+[33mcommit fcfb9f40e4d1e27c1a7e627ea42bae862c1cf6bb[m
+Merge: 0b55362 074cfd7
+Author: agarwarahul-22 <ag.rahul223@gmail.com>
+Date:   Mon Jun 28 19:04:52 2021 +0530
+
+    merge
+
+[33mcommit 0b553621291465b94098d423a0fcf3a7c3661095[m
+Author: agarwarahul-22 <ag.rahul223@gmail.com>
+Date:   Mon Jun 28 12:22:16 2021 +0530
+
+    final updates before todays task
+
+[33mcommit 074cfd7539525184a154e9cd90cb9d1d748a64e7[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: amritanshusikdar <amritanshu.sikdar@gmail.com>
+Date:   Mon Jun 28 00:57:19 2021 +0530
+
+    add fake order details
+
+[33mcommit ebdf7663268021733b2b343cbff8decd10d349a2[m
+Merge: c64d4ea f08b585
+Author: amritanshusikdar <amritanshu.sikdar@gmail.com>
+Date:   Sun Jun 27 23:20:25 2021 +0530
+
+    Merge branch 'abhishek' into main
+
+[33mcommit f08b585dd50867f0dcec27725af56e7a7c9e9f2f[m
+Merge: 72c19d7 c64d4ea
+Author: amritanshusikdar <amritanshu.sikdar@gmail.com>
+Date:   Sun Jun 27 23:19:16 2021 +0530
+
+    merge PR from abhishek
+
+[33mcommit c64d4eab6468520c37ca240f67afc3fc459038de[m
+Author: amritanshusikdar <amritanshu.sikdar@gmail.com>
+Date:   Sun Jun 27 22:29:08 2021 +0530
+
+    change Components to components
+
+[33mcommit fe3b6880ae6c972b2c716cce8ae5cea8cfa43a94[m
+Author: amritanshusikdar <amritanshu.sikdar@gmail.com>
+Date:   Sun Jun 27 22:24:31 2021 +0530
+
+    add fake rest api support
+
+[33mcommit 72c19d7dd2203bc97d12ebe4d3d13cdb7e7b9387[m[33m ([m[1;31morigin/abhishek[m[33m, [m[1;32mabhishek[m[33m)[m
+Author: abhisheklig84 <39373032+abhisheklig84@users.noreply.github.com>
+Date:   Sun Jun 27 12:58:37 2021 +0530
+
+    Update App.js
+
+[33mcommit 8f58507d769bb1da5dc910f6205753d7e9d600c8[m
+Author: abhisheklig84 <abhisheklig84.com>
+Date:   Sun Jun 27 12:48:53 2021 +0530
+
+    changes
+
+[33mcommit 2973f8edadd2296f2a4e1f9d7975f9c0995d910c[m
+Merge: c5d336b ad2f207
+Author: Amritanshu Sikdar <amritanshu.sikdar@gmail.com>
+Date:   Sun Jun 27 11:29:18 2021 +0530
+
+    Merge branch 'rahul'
+
+[33mcommit ad2f20755ba89d30dc84334056c579b152671750[m
+Merge: 94d7fc3 c5d336b
+Author: Amritanshu Sikdar <amritanshu.sikdar@gmail.com>
+Date:   Sun Jun 27 11:28:41 2021 +0530
+
+    merge pr from rahul
+
+[33mcommit c5d336bba7e3f9074fab608548b906ac8f0cad83[m
+Merge: 57482c7 7c0375e
+Author: ANUJ KUMAR YADAV <anujf0510@gmail.com>
+Date:   Sat Jun 26 21:40:52 2021 +0530
+
+    Merge pull request #1 from abhisheklig84/anuj
+    
+    feat:sidebar and navbar
+
+[33mcommit 7c0375e8f941669b0b4668c91434161f98d7a48d[m[33m ([m[1;31morigin/anuj[m[33m, [m[1;32manuj[m[33m)[m
+Author: anuj-kumary <anujf0510@gmail.com>
+Date:   Sat Jun 26 21:35:16 2021 +0530
+
+    feat:Header
+
+[33mcommit 94d7fc393f1b3260b8e9e51966d14e5cf6aac875[m
+Author: agarwarahul-22 <ag.rahul223@gmail.com>
+Date:   Sat Jun 26 15:01:41 2021 +0530
+
+    OrderStats and OrderReq
+
+[33mcommit aec49a4d1ab2d81b1630cd1099b5e1e9d40c04e2[m
+Author: amritanshusikdar <amritanshu.sikdar@gmail.com>
+Date:   Fri Jun 25 00:20:24 2021 +0530
+
+    init rahul
+
+[33mcommit c3f9394a742bb5f6236f19556c1f5f82e2838426[m
+Author: amritanshusikdar <amritanshu.sikdar@gmail.com>
+Date:   Fri Jun 25 00:19:36 2021 +0530
+
+    init anuj
+
+[33mcommit 068fdc7aeae8835a736aabfbae4cd8d48cd1602e[m
+Author: amritanshusikdar <amritanshu.sikdar@gmail.com>
+Date:   Fri Jun 25 00:19:15 2021 +0530
+
+    init abhishek
+
+[33mcommit 57482c7adff10004bfbb20be1fba8fc8b0f19e38[m
+Author: amritanshusikdar <amritanshu.sikdar@gmail.com>
+Date:   Fri Jun 25 00:18:30 2021 +0530
+
+    init main
