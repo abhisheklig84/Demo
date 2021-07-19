@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { connect } from 'react-redux';
-import { fetchOrders } from '../../Redux/ActionCreaters';
-import Pagination from '../Pagination';
-import Bag from '../../Assets/Bag.svg';
-import Location from '../../Assets/Location.svg';
-import Dollar from '../../Assets/Dollar.svg';
+import { fetchOrders } from '../../../Redux/ActionCreaters';
+import Pagination from './Pagination';
+import Bag from '../../../Assets/Bag.svg';
+import Location from '../../../Assets/Location.svg';
+import Dollar from '../../../Assets/Dollar.svg';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 
 const Box = styled.div`
-    width: 345px;
     margin-left: 20px;
     margin-top: 65px;
 `;

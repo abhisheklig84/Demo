@@ -7,6 +7,7 @@ const Box = styled.div`
     flex-direction: row;
     justify-content: space-around;
     margin-top: 70px;
+    overflow-x: auto;
 `;
 
 const Card = styled.div`

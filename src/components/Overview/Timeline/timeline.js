@@ -2,16 +2,16 @@ import React from 'react';
 import {Timeline, TimelineItem, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot} from '@material-ui/lab';
 import CheckIcon from '@material-ui/icons/Check';
 import styled from 'styled-components';
-import Check from '../Assets/Check.svg'
-import Confirmed from '../Assets/Confirmed.svg'
-import Dispatched from '../Assets/Dispatched.svg'
-import Packed from '../Assets/Packed.svg'
+import Check from '../../../Assets/Check.svg'
+import Confirmed from '../../../Assets/Confirmed.svg'
+import Dispatched from '../../../Assets/Dispatched.svg'
+import Packed from '../../../Assets/Packed.svg'
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 
 
 const Box = styled.div`
     border-radius: 5px;
-    width: 345px;
+    width: 330px;
     margin-left: 20px;
 `;
 
