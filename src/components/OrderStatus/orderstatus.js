@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const Box = styled.div`
   background-color: white;
-  height: 505px;
-  width: 779px !important;
+  height: 60%;
+  /* width: 779px !important; */
   margin-left: 2%;
   border-radius: 5px;
   box-shadow: 1px 1px 4px 0 lightgrey;

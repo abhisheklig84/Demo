@@ -20,6 +20,7 @@ const AM1  = styled.div`
 const AM2  = styled.div`
     display: flex;
     flex-direction: column;
+    width: 55%;
 `;
 const AM3  = styled.div`
     display: flex;

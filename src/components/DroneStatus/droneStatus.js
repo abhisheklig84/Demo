@@ -6,7 +6,7 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 const Box = styled.div`
   background-color: white;
   height: 274px;
-  width: 779px;
+  /* width: 779px; */
   margin-left: 2%;
   margin-top: 30px;
   border-radius: 6px;
